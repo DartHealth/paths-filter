@@ -15,10 +15,9 @@ jobs:
       with:
         node-version: 20
         cache: 'npm'
-    - run: npm ci
-    - name: Debug @actions/core
-      run: cat node_modules/@actions/core/package.json
-    - run: npm run all
+    - run: |
+        npm ci
+        npm run all
 
   self-test:
     runs-on: ubuntu-latest
