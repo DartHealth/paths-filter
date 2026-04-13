@@ -105,6 +105,8 @@ jobs:
 
   test-change-type:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
     - uses: actions/checkout@v6
     - name: configure GIT user
